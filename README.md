@@ -366,3 +366,24 @@ class EmployeeController extends Controller
 }
 ```
 Dengan mengikuti langkah-langkah di atas, aplikasi Anda sekarang memiliki fungsionalitas penuh untuk mengelola data detail karyawan dari halaman admin, menutup celah yang Anda temukan. ✨
+
+---
+
+## 🚀 Langkah Selanjutnya (Part 2)
+
+Fondasi aplikasi sudah sangat kuat. Di **Part 2**, kita akan melanjutkan dengan:
+
+- Fitur Absensi Harian untuk Admin
+- Fitur Absensi Karyawan (Check-in/Check-out)
+- Riwayat Absensi
+- Laporan dan Statistik
+- Management Hari Libur
+
+---
+
+## 📚 Informasi Part 2
+
+Untuk melanjutkan pengembangan aplikasi absensi dengan fitur-fitur lanjutan yaitu ``**Fitur utama Absensi pembuatan Logik dan view blade untuk menyimpan data absensi karyawan**``, kunjungi:
+
+**[Part 2 - Panduan Absensi Project](https://github.com/ahmad-syaifuddin/part2-panduan-absensi-project.git)**
+
