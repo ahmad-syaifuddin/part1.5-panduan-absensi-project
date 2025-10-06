@@ -62,7 +62,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::put('/users/{user}/employee', [EmployeeController::class, 'update'])
         ->name('admin.employees.update');
 
-    // RUTE BARU UNTUK LAPORAN HARIAN
+    // RUTE LAINNYA
     Route::get('/admin/reports/daily', [ReportController::class, 'dailyReport'])
         ->name('admin.reports.daily');
     
