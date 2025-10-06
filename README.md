@@ -165,7 +165,7 @@ Isi file resources/views/admin/employees/_form.blade.php:
     </div>
     <div>
         <x-input-label for="nip" :value="__('NIP')" />
-        <x-text-input id="nip" class="block mt-1 w-full" type="text" name="nip" :value="old('nip', $employee->nip ?? '')" required />
+        <x-text-input id="nip" class="block mt-1 w-full" type="text" name="nip" maxlength="16" :value="old('nip', $employee->nip ?? '')" required />
     </div>
     <div>
         <x-input-label for="posisi" :value="__('Posisi')" />
@@ -181,7 +181,7 @@ Isi file resources/views/admin/employees/_form.blade.php:
     </div>
     <div>
         <x-input-label for="no_hp" :value="__('Nomor HP')" />
-        <x-text-input id="no_hp" class="block mt-1 w-full" type="text" name="no_hp" :value="old('no_hp', $employee->no_hp ?? '')" required />
+        <x-text-input id="no_hp" class="block mt-1 w-full" type="text" name="no_hp" maxLength="15" :value="old('no_hp', $employee->no_hp ?? '')" required />
     </div>
     <div class="md:col-span-2">
         <x-input-label for="alamat" :value="__('Alamat')" />
@@ -305,11 +305,11 @@ class EmployeeController extends Controller
         // Validasi data
         $validatedData = $request->validate([
             'nama_lengkap' => 'required|string|max:255',
-            'nip' => 'required|string|max:255|unique:employees,nip',
+            'nip' => 'required|string|max:16|unique:employees,nip',
             'posisi' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
             'tanggal_perekrutan' => 'required|date',
-            'no_hp' => 'required|string|max:255',
+            'no_hp' => 'required|string|max:15',
             'alamat' => 'required|string',
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
             'status' => 'required|in:aktif,tidak aktif,dihentikan',
